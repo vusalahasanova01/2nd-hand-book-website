@@ -8,18 +8,20 @@
 }
 body{
     min-width: 100hv;
-    
+    padding: 0px;
+    margin: 0px;
 }
 header{
-    position:absolute;
-    top:0;
-    left: 0;
+    /* position:absolute; */
     width: 100%;
-    padding:30px 100px;
+    padding:0px 3%;
     display:flex;
     justify-content: space-between;
     align-items: center;
     z-index:10000;
+    position: fixed;
+    background-color: rgba(255, 255, 255,0.4);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .button{
     padding: .7em 3rem;
@@ -33,11 +35,12 @@ header{
     position: relative;
     overflow: hidden;
     z-index: 0;
-    
-
+    border: none;
+    transition: 0.5s all;
 }
 .button:hover{
-    background-color:rgb(245, 131, 148);
+    background-color:rgb(245, 23, 56);
+
 }
 
 
@@ -77,6 +80,13 @@ header ul li a.active
 background:rgb(255, 182, 193);
 color:white;
 }
+@media screen and (max-width:1200px) {
+    .listnav
+    {
+        display: none;
+    }
+    
+}
 header .cursor
 {
     cursor:pointer;
@@ -107,8 +117,6 @@ header .cursor
 section{
     position: relative;
     width:100%;
-    height: 100vh;
-    padding:100px;
     display:flex;
 }
 section img{
@@ -121,30 +129,62 @@ section img{
      z-index: -2;
     
 }
-.form h2{
 
-    position: absolute;
-    left:800px;
-    top:100px;
+.photo
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-size: cover;
+    background-image: url('./images/pexels-burst-545049.jpg');
+    background-position: top center;
+    padding-left: 10%;
+    padding-right: 10%;
+    flex-wrap: wrap;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
+.titleAndText 
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+}
+.titleAndText  .title
+{
+    font-size: 85px;
+}
+.titleAndText  .text
+{
+    font-size: 45px;
+}
+
 form{
-    position: absolute;
-    left:800px;
-    top:200px;
+    width: 400px;
+    height: auto;
+    padding: 40px;
+    margin-right: 5%;
+    margin-top: 100px;
+    backdrop-filter:blur(-5rem);
+    border-radius: 10px;
+    background: linear-gradient( to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3) );
 }
-section .first{
-    display:flex;
-    width:150%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    
 
+section {
+    display:flex;
+    /* width:100%; */
+    /* height: 100%; */
+    justify-content: flex-end;
+    align-items: center;
 }
-section .first .form{
-    width: 50%;
+
+section  form {
+    display: flex;
+    flex-direction: column;
 }
-section .first .form h2{
+section  form h2{
     color:rgb(248, 117, 137);
     font-weight: 600;
     font-size: 3rem;
@@ -153,13 +193,12 @@ section .first .form h2{
     border-bottom:4px solid rgb(36, 36, 61);
     display: inline-block;
     letter-spacing: 1px;
-
 }
-section .first .form .input{
+section  form .input{
     margin-bottom:20px;
 
 }
-section .first .form .input span{
+section  form .input span{
     font-size: 16px;
     margin-bottom:5px;
     display:inline-block;
@@ -168,7 +207,7 @@ section .first .form .input span{
     font-size: 20px;
     letter-spacing: 1px;
 }
-section .first .form .input input{
+section  form .input input{
     width: 100%;
     padding: 10px 20px;
     outline: none;
@@ -180,7 +219,7 @@ section .first .form .input input{
     background: transparent;
     border-radius: 30px;
 }
-section .first .form .input input[type="submit"]
+section  form .input input[type="submit"]
 {
     background:rgb(248, 117, 137); ;
     color:#fff;
@@ -189,36 +228,36 @@ section .first .form .input input[type="submit"]
     font-weight: 500;
     cursor:pointer;
 }
-section .first .form .input input[type="submit"]:hover{
+section  form .input input[type="submit"]:hover{
     background:rgb(255, 182, 193)  ;
 }
-section .first .form .remember{
+section  form .remember{
     margin-bottom:25px;
     color:rgb(247, 92, 115);
     font-weight: 500;
     font-size: 15px;
 }
-section .first .form .input p{
+section  form .input p{
     color:rgb(48, 48, 82);
 }
 
-section .first .form .input p a{
+section  form .input p a{
     color:rgb(247, 92, 115);
 }
-  section .form .input h3{
+  section form .input h3{
     color:rgb(40, 40, 66);
     text-align:center;
     margin: 80px 0 10px;
     font-weight:500;
 
 }
-section .first .form .media{
+section  form .media{
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
-section .first .form .media li{
+section  form .media li{
     list-style: none;
     width: 50px;
     height: 50px;
@@ -235,112 +274,148 @@ hr{
 }
 
  .blog{
-    position:relative;
     width:100%;
-    height: 100vh;
+    height: auto;
     display: flex;
-
-
-}
- .blog .image{
-    position: relative;
-    width:80%;
-    height: 100%;
-}
- .blog .image{
-    position: relative;
-    top:30px;
-
+    justify-content: center;
+    background-image: url(./images/pexels-dina-nasyrova-3808243.jpg);
+    background-size: cover;
+    background-position: bottom center;
 }
 
- .blog .image:before{
-    content:'';
-    position: absolute;
-    top:0;
-    left:0;
+.contentBlock
+{
+    padding-top: 200px;
+    padding-bottom: 200px;
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 100%;
-    background: linear-gradient(225deg,#e04e7f,rgb(119, 119, 206));
-    z-index: 1;
-    mix-blend-mode: screen;
-
-
-
-}
-  .blog .image img{
-
-position:absolute;
-top:0;
-left:0;
-width: 100%;
-height: 100%;
-object-fit: cover;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 .blog .content
 {
-    font-size: 1.5rem;
-    padding-top:40px;
+    color: white;
+    text-shadow: 2px 2px black;
+    font-size:25px;
     padding-right:1px;
-    padding-bottom:10px;
-    padding-left:20px;
-    
     height: 100%;
     width: 50%;
 }
+.blog .content h3
+{
+    font-size:70px;
+}
+
+
 .sales{
-    display:grid;
-    place-items:center;
-    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
     width: 100%;
 }
-.sales h1{
-    font-size: 60px;
-    color:rgb(68, 76, 85);
-}
-.sales h1:hover{
-    color:rgb(108, 124, 141);
-}
-.sales .row {
-    margin-top:5%;
+
+
+
+.sales  {
     display: flex;
     justify-content: space-between;
-
+    height: auto;
+    padding-top: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-bottom: 50px;
 }
-.sales .row .col{
-    flex-basis:50%;
-    background:rgb(255, 182, 193) ;
-    border-radius:10px;
-    margin: 5%;
-    padding:20px 12px;
-    box-sizing: border-box;
+.salesBlock
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    background-image: url(./images//library.jpg);
+    background-size: cover;
+    background-position: top center;
+}
 
+.elements
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 40px;
+    margin-top: 30px;
+}
+
+.salesheading
+{
+    width: 100%;
+    text-align: center;
+    font-size: 60px;
+    color: white;
+}
+
+
+.sales .elements .col{
+    width: 350px;
+    height: auto;
+    background:rgba(0, 0, 0,0.5) ;
+    border-radius:10px;
+    padding:40px;
+    padding-bottom:30px;
+    box-sizing: border-box;
+}
+
+.sales .elements .col h3{
+    font-size: 30px;
+    color: white !important;
+    text-shadow: 2px 2px black;
+}
+.sales .elements .col p{
+    margin-top: 10px;
+    font-size: 25px;
+    color: white;
+    text-align: justify;
+}
+.quotesCont
+{
+    background-image: url(./images/quotesBG.jpg);
+    width: 100%;
+    height: auto;
 }
 .quotes{
-    display:grid;
-    place-items:center;
-    min-height: 100vh;
-    width: 100wh;
-    background-color: rgb(255, 182, 193);
+    background-color: rgba(0, 0, 0, 0.5);
+    display:flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 .heading{
-    color:cornsilk;
-    font-size: 3rem;
+    color:white;
+    text-shadow: 1px 1px ;
+    font-size: 60px;
+}
 
-    
- 
+.box-container
+{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    row-gap: 20px;
 }
 .box{
-    background: #fff;
-    max-width: 60rem;
-    border-radius: .5rem;
+    background: rgba(255, 255, 255, 0);
+    width: 100%;
+    border-radius: 20px;
     box-shadow: 0 0 .3rem #333;
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding:2rem 2rem;
-    margin:1rem;
     clear: both;
-
+    color: white;
 }
 .one p{
     font-size:1.5rem;

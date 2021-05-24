@@ -13,11 +13,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="book icon" href="images/e642979262088590f7b8cadf6c7d255e.jpg">
 </head>
+
+
+
+
+
+
 <body>
     <header>
         
         <a href="#" class="logo">Bookwarm</a>
-        <ul>
+        <ul class="listnav">
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#blog">Blog</a></li>
         <li><a href="#quotes">Quotes</a></li>
@@ -28,8 +34,6 @@
             <input type="text" placeholder="Find your favourite books">
            <i class="fas fa-search"></i>
         </div>
-    <div class="cursor"></div>
-    
     </header>
 
 
@@ -39,145 +43,108 @@
 
     <section class="home" id="home"> 
         <div class="photo">
-        <img src="images/pexels-burst-545049.jpg">
-        </div>
-        <div class="first">
-            <div class="form">
-                <h2>Login</h2>
-                <form>
-                    <div class="input">
-                        <span>Username  </span>
-                        <input type="text" placeholder="username" required>
+            <div class="titleAndText">
+                <h1 class="title">Vüsala Hasanova</h1>
+                <p class="text">A room without books is like a body without a soul</p>
+            </div>
 
-                    </div>
-                    <div class="input">
-                        <span>Password </span>
-                        <input type="password" placeholder="password" required>
-                        
-                    </div>
-                    <div class="remember">
-                        <label><input type="checkbox" name="">Remember me</label>
-                    </div>
-                    <div class="input">
-                    
-                    <input type="submit" value="Sign in">
-                    
+            <form>
+                <h2>Login</h2>
+                <div class="input">
+                    <span>Username  </span>
+                    <input type="text" placeholder="username" required>
                 </div>
                 <div class="input">
-                    
-                    <p>Don't have an account?<a href="#">Sign up</a></p>
-                    
-                </form>
-                
-            </div>
+                    <span>Password </span>
+                    <input type="password" placeholder="password" required>
+                </div>
+                <div class="remember">
+                    <label><input type="checkbox" name="">Remember me</label>
+                </div>
+                <div class="input">
+                    <input type="submit" value="Sign in">
+                </div>
+                <p>Don't have an account?<a href="#">Sign up</a></p>
+            </form>
         </div>
     </section>
-    <hr>
+
 
     <section class="blog" id="blog">
-        <div class="image">
-            <img src="./images/pexels-dina-nasyrova-3808243.jpg">
+        <div class="contentBlock">
+            <div class="content">
+                <h3>Why should we read secondhand book?</h3>
+                <p>  Whenever you are buying second hand textbooks, you are creating a path for recycling.
+                    In addition to recycling, you are able to save the lives of many trees. This is because more trees are destroyed for the paper manufacturing process.
+                    By using second hand books, you are able to reduce landfill waste.</p>
+                <a href="#"><button class="button">Learn more</button></a>
+            </div>
         </div>
-    <div class="content">
-        <h3>Why should we read secondhand book?</h3>
-        <p>  Whenever you are buying second hand textbooks, you are creating a path for recycling.
-            In addition to recycling, you are able to save the lives of many trees. This is because more trees are destroyed for the paper manufacturing process.
-            By using second hand books, you are able to reduce landfill waste.</p>
-         
-        <a href="#"><button class="button">Learn more</button></a>
-    
-    </div>
     </section>
 
-<section class="quotes" id="quotes">
-    <h1 class="heading">Quotes</h1>
-    <div class="box-container">
-        <div class="box">
-            <div class="one">
-                <p>“Reading is essential for those who seek to rise above the ordinary.” – Jim Rohn</p>
-            </div>
-        </div>
-        <div class="box">
-            <div class="one">
-                <p>“Books are mirrors: You only see in them what you already have inside you.” – Carlos Ruiz Zafón</p>
-            </div>
-        </div>
-        <div class="box">
-            <div class="one">
-                <p>“Books and doors are the same thing. You open them, and you go through into another world.” – Jeanette Winterson
 
-                </p>
+
+<section  class="quotesCont" id="quotes">
+    <div  class="quotes" >
+        <h1 class="heading">Quotes</h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="one">
+                    <p>“Reading is essential for those who seek to rise above the ordinary.” – Jim Rohn</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="one">
+                    <p>“Books are mirrors: You only see in them what you already have inside you.” – Carlos Ruiz Zafón</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="one">
+                    <p>“Books and doors are the same thing. You open them, and you go through into another world.” – Jeanette Winterson
+
+                    </p>
+                </div>
             </div>
         </div>
-
     </div>
-
 </section >
-<section class="sales" id="sales">
-<h1 >Book Sales</h1><br>
-<div class="row">
-    <div class="col">
-        <h3>10 MILLION+NEW & USED BOOKS</h3>
-        <p>All of our used books are inspected by hand for quality.
 
-        </p>
-    </div>
-    <div class="col">
-        <h3>FREE SHIPPING ON US ORDERS OVER $10</h3>
-        <p>
-            Free standard shipping on US orders over $10
-        </p>
-    </div>
-    <div class="col">
-        <h3>HAVE BOOKS?SELL TO US AND GET CASH</h3>
-        <p>Instant cash offers on over a million titles – even if you did not buy them from us
-            <a href="#">Sell books</a>
-        </p>
-    </div>
-</div>
-    
 
-</section>
 
-    
-<section class="contact" id="contact">
-    
-    
-    <div class="first">
-        <div class="form">
-            <h2>Contact us</h2>
-            <form>
-                <div class="input">
-                    <span>First name  </span>
-                    <input type="text" placeholder="Your First name" required>
 
-                </div>
-                <div class="input">
-                    <span>Last name  </span>
-                    <input type="text" placeholder="Your Last name" required>
 
-                </div>
-                <div class="input">
-                    <span>Email adress </span>
-                    <input type="email" placeholder="Email adress" required>
-                    
-                </div>
-                <div class="input">
-                    <span>Your message </span>
-                    <textarea> </textarea>
-                    
-                </div>
-                <div class="input">
-                
-                <input type="submit" value="Sign in">
-                
+
+
+
+
+
+
+
+
+<section class="salesBlock"  id="sales">
+    <div class="sales">
+        <h1 class="salesheading">Book Sales</h1>
+        <div class="elements">
+            <div class="col">
+                <h3>10 MILLION+NEW & USED BOOKS</h3>
+                <p>All of our used books are inspected by hand for quality.</p>
             </div>
-            
-            </form>
-            
+            <div class="col">
+                <h3>FREE SHIPPING ON US ORDERS OVER $10</h3>
+                <p>Free standard shipping on US orders over $10</p>
+            </div>
+            <div class="col">
+                <h3>HAVE BOOKS?SELL TO US AND GET CASH</h3>
+                <p>Instant cash offers on over a million titles – even if you did not buy them from us</p>
+            </div>
         </div>
     </div>
 </section>
+
+    
+    
+    
+    
 <footer>
 <div class="footer-content">
     <h3>Bookwarm</h3>
